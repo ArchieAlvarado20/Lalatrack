@@ -92,6 +92,47 @@ function PushNotificationManager() {
   if (!isSupported) {
     return <p>Push notifications are not supported in this browser.</p>;
   }
+
+  return (
+    <section
+      style={{
+        backgroundColor: "#f96302",
+        color: "#fff",
+        fontWeight: "700",
+        padding: "0.75rem 1.8rem",
+        borderRadius: "8px",
+        border: "none",
+        cursor: "pointer",
+        fontSize: "1rem",
+        boxShadow: "0 4px 8px rgb(249 99 2 / 0.4)",
+        transition: "background-color 0.3s ease",
+        marginBottom: "1rem",
+      }}
+    >
+      <h3>Push Notifications</h3>
+      {subscription ? (
+        <>
+          <p>You are subscribed to push notifications.</p>
+          <button onClick={unsubscribeFromPush} style={{ marginRight: "1rem" }}>
+            Unsubscribe
+          </button>
+          <input
+            type="text"
+            placeholder="Enter notification message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            style={{ marginRight: "1rem", padding: "0.3rem", width: "60%" }}
+          />
+          <button onClick={sendTestNotification}>Send Test</button>
+        </>
+      ) : (
+        <>
+          <p>You are not subscribed to push notifications.</p>
+          <button onClick={subscribeToPush}>Subscribe</button>
+        </>
+      )}
+    </section>
+  );
 }
 
 // PWA Install Prompt Component
