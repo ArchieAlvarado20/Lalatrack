@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import "@/app/ui/auth/login.css";
+import "@/app/ui/auth/Login.css";
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
