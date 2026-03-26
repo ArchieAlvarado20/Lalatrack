@@ -3,7 +3,6 @@ import Link from "next/link";
 import "@/app/ui/auth/Login.css";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function Login() {
   return (
