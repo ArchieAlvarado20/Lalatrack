@@ -13,6 +13,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="manifest" href="/manifest.json" />
+      <meta name="theme-color" content="#000000" />
       <body>
         <div className="phone-shell">{children}</div>
       </body>
