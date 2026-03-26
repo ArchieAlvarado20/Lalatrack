@@ -11,13 +11,13 @@ export default function BottomNav() {
     <nav className="bottom-nav">
       <Link href={"/dashboard"} className="nav-item active">
         <span className="nav-icon">
-          <FaHome size={32} />
+          <FaHome size={25} />
         </span>
         <span className="nav-label">Home</span>
       </Link>
       <Link href={"/rides"} className="nav-item">
         <span className="nav-icon">
-          <FaMotorcycle size={32} />
+          <FaMotorcycle size={25} />
         </span>
         <span className="nav-label">Rides</span>
       </Link>
@@ -26,13 +26,13 @@ export default function BottomNav() {
       </div>
       <Link href={"/expenses"} className="nav-item">
         <span className="nav-icon">
-          <FaFileInvoiceDollar size={32} />
+          <FaFileInvoiceDollar size={25} />
         </span>
         <span className="nav-label">Expenses</span>
       </Link>
       <Link href={"/profile"} className="nav-item">
         <span className="nav-icon">
-          <FaUserAlt size={32} />
+          <FaUserAlt size={25} />
         </span>
         <span className="nav-label">Profile</span>
       </Link>

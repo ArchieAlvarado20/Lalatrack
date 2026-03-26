@@ -27,7 +27,7 @@ export default function Home() {
 
       <div className="login-form-wrap">
         <div className="login-sub2" style={{ marginBottom: "20px" }}>
-          Whether you're a delivery rider, motor-taxi rider, tnvs driver,
+          Whether you{"'"}re a delivery rider, motor-taxi rider, tnvs driver,
           freelancer, or side hustler <br /> — Lalatrack helps you monitor,
           analyze, and grow your income with ease.
         </div>

@@ -1,27 +1,11 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
 import "@/app/ui/auth/Login.css";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function Login() {
-  const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState(false);
-
-  const handleLogin = () => {
-    const email = document.getElementById("inp-email").value;
-    const password = document.getElementById("inp-password").value;
-
-    if (email !== "test@email.com" || password !== "123456") {
-      setError(true);
-    } else {
-      setError(false);
-      alert("Login success!");
-    }
-  };
-
   return (
     <div className="screen">
       <div className="login-hero">
@@ -44,11 +28,11 @@ export default function Login() {
       </div>
 
       <div className="login-form-wrap">
-        {error && (
+        {/* {error && (
           <div className="error-msg">
             ❌ Invalid email or password. Try again.
           </div>
-        )}
+        )} */}
 
         <label className="form-label">Email Address</label>
         <div className="input-row">
@@ -68,24 +52,22 @@ export default function Login() {
           <input
             className="form-input"
             id="inp-password"
-            type={showPassword ? "text" : "password"}
+            // type={showPassword ? "text" : "password"}
             placeholder="Enter your password"
           />
           <span
             className="input-icon"
-            onClick={() => setShowPassword(!showPassword)}
+            // onClick={() => setShowPassword(!showPassword)}
             style={{ cursor: "pointer", marginTop: "-.5rem" }}
           >
-            {showPassword ? <FaEyeSlash size={16} /> : <FaEye size={16} />}
+            {/* {showPassword ? <FaEyeSlash size={16} /> : <FaEye size={16} />} */}
           </span>
         </div>
 
         <a className="forgot-link">Forgot password?</a>
 
         <Link href="/dashboard">
-          <button className="btn-primary" onClick={handleLogin}>
-            Sign In →
-          </button>
+          <button className="btn-primary">Sign In →</button>
         </Link>
 
         <div className="divider">
@@ -111,7 +93,7 @@ export default function Login() {
         </div>
 
         <div className="signup-row">
-          Don't have an account? <a>Sign Up Free</a>
+          Don{"'"}t have an account? <a>Sign Up Free</a>
         </div>
       </div>
     </div>
