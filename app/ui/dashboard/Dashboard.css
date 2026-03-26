@@ -1,0 +1,6 @@
+/* ===== DASHBOARD SCREEN ===== */
+#screen-dashboard {
+  background: var(--gray-50);
+  display: flex;
+  flex-direction: column;
+}
